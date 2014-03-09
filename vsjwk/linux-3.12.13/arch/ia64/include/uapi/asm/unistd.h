@@ -326,4 +326,6 @@
 #define __NR_accept4			1334
 #define __NR_finit_module		1335
 
+#define __NR_vsendfile			1336
+
 #endif /* _UAPI_ASM_IA64_UNISTD_H */
