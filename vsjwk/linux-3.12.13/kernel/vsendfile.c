@@ -1,8 +1,8 @@
 #include <linux/linkage.h>
 
-asmlinkage ssize_t sys_vsendfile(const char *source, const char *destination)
+asmlinkage long sys_vsendfile(const char *source, const char *destination)
 {
-	ssize_t revtval;
+	long revtval;
 
 	retval = 1;
 
