@@ -1,7 +1,10 @@
 #include <linux/linkage.h>
-#include <string.h>
 
-asmlinkage long sys_vsendfile(char *path)
+asmlinkage ssize_t sys_vsendfile(const char *source, const char *destination)
 {
-	return strlen(path);
+	ssize_t revtval;
+
+	retval = 1;
+
+	return retval;
 }
