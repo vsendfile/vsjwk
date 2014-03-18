@@ -33,6 +33,9 @@ static int vsend_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
 		sg_init_table(sg,ARRAY_SIZE(sg));
 		sg_set_buf(&sg[0],"test1",5);
 		sg_set_buf(&sg[1],"test2",5);
+
+		printk("sg_setbuf completed\n");
+//
 		virtqueue_add_sgs(&vsend_vq,sg,0,0,data,GFP_ATOMIC);		
 				
 		printk("file1: %s\n",data->file1);
